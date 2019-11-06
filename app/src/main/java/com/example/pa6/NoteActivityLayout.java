@@ -39,14 +39,14 @@ public class NoteActivityLayout extends GridLayout {
         contentET.setHint(getResources().getString(R.string.contents));
 
         GridLayout.Spec rowSpec = GridLayout.spec(0,1,1);
-        GridLayout.Spec colSpec = GridLayout.spec(0,1,2);
+        GridLayout.Spec colSpec = GridLayout.spec(0,1,4);
         layoutParams = new LayoutParams(rowSpec,colSpec);
         titleET.setLayoutParams(layoutParams);
         rowSpec = GridLayout.spec(0,1,1);
         colSpec = GridLayout.spec(1,1,1);
         layoutParams = new LayoutParams(rowSpec,colSpec);
         spinner.setLayoutParams(layoutParams);
-        rowSpec = GridLayout.spec(1,1,13);
+        rowSpec = GridLayout.spec(1,1,15);
         colSpec = GridLayout.spec(0,2,2);
         layoutParams = new LayoutParams(rowSpec,colSpec);
         contentET.setLayoutParams(layoutParams);
