@@ -58,10 +58,10 @@ public class NoteActivity extends AppCompatActivity {
         spinner.setAdapter(SPINNER_ADAPTER);
 
         Bundle extras = getIntent().getExtras();
-        String extraStr = extras.getString("type");
+        String activityType = extras.getString("type");
         doneButton.setText(getResources().getString(R.string.done));
         // Checks to see what kind of Activity start it is
-        if(extraStr.equals("edit")){
+        if(activityType.equals("edit")){
             // comes in here if its a edit existing item
             String existingTitle = extras.getString("title");
             String existingContent= extras.getString("content");
