@@ -57,12 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
         NoteList = new ArrayList<>();
 
-//        dummy note's to test functionality
-//        NoteList.add(new Note("HP and Sorcerer's Stone", "JKR", 0));
-//        NoteList.add(new Note("Aye whats good", "nothing much, wbu", 1));
-//        NoteList.add(new Note("HP and Chamber of Secrets", "JKR", 2));
-
-
         // set up an array adapter to be the middleman between our data source
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, NoteList);
         listView = mainActivityLayout.returnListView();
@@ -196,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
         noteItemTitle = data.getStringExtra("title");
         noteItemContent = data.getStringExtra("content");
         noteItemSpinner = data.getIntExtra("spinnerLocation",-1);
+
         if (requestCode == 0) {
             // Comes in here if requestcode was for creating new item
             NoteList.add(new Note(noteItemTitle, noteItemContent, noteItemSpinner));

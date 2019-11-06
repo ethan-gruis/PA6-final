@@ -10,15 +10,17 @@
 package com.example.pa6;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.view.Gravity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
-import android.widget.ListView;
 import android.widget.Spinner;
-
+/**
+ * Builds the layout behind NoteActivity using GridLayout
+ *
+ */
 public class NoteActivityLayout extends GridLayout {
+    // fields
     private GridLayout.LayoutParams layoutParams;
     private EditText titleET;
     private EditText contentET;
@@ -28,16 +30,17 @@ public class NoteActivityLayout extends GridLayout {
     public NoteActivityLayout(final Context context) {
         super(context);
         setColumnCount(2);
-
-
+        // initialization of fields
         titleET = new EditText(context);
         contentET = new EditText(context);
         spinner = new Spinner(context);
         doneButton = new Button(context);
 
+        // setting hint text in EditText views
         titleET.setHint(getResources().getString(R.string.title));
         contentET.setHint(getResources().getString(R.string.contents));
 
+        // Laying out the various children of the GridLayout
         GridLayout.Spec rowSpec = GridLayout.spec(0,1,1);
         GridLayout.Spec colSpec = GridLayout.spec(0,1,4);
         layoutParams = new LayoutParams(rowSpec,colSpec);
@@ -55,22 +58,40 @@ public class NoteActivityLayout extends GridLayout {
         layoutParams = new LayoutParams(rowSpec,colSpec);
         doneButton.setLayoutParams(layoutParams);
 
+        // sets gravity on the text within the content view
         contentET.setGravity(Gravity.TOP|Gravity.LEFT);
 
+        // adds the views into the layout
         addView(titleET);
         addView(spinner);
         addView(contentET);
         addView(doneButton);
     }
+    /**
+     * returns the doneButton to have its function defined in NoteActivity
+     * @return doneButton
+     */
     public Button getDoneButton(){
         return doneButton;
     }
+    /**
+     * returns the returnTitleET to have its function defined in NoteActivity
+     * @return titleET
+     */
     public EditText returnTitleET(){
         return titleET;
     }
+    /**
+     * returns the returnContentET to have its function defined in NoteActivity
+     * @return contentET
+     */
     public EditText returnContentET(){
         return contentET;
     }
+    /**
+     * returns the returnSpinner to have its function defined in NoteActivity
+     * @return spinner
+     */
     public Spinner returnSpinner(){
         return spinner;
     }

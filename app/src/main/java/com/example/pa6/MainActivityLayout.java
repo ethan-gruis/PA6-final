@@ -21,38 +21,46 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Builds the layout behind MainActivity using GridLayout
+ *
+ */
 public class MainActivityLayout extends GridLayout {
+        // Fields
         private Button newNoteButton;
         private GridLayout.LayoutParams layoutParams;
         private ListView listView;
+
+
         public MainActivityLayout(final Context context) {
             super(context);
-
             setColumnCount(1);
 
+            // sets up children of GridLayout
             layoutParams = new GridLayout.LayoutParams();
             layoutParams.width = LayoutParams.MATCH_PARENT;
             layoutParams.height = LayoutParams.WRAP_CONTENT;
-            newNoteButton = new Button(context); // this button needs to send us to a new activity
-            newNoteButton.setLayoutParams(layoutParams);   // v v v v v v v v v v v v v v v v v v v v
-            newNoteButton.setText("Add new note");
+            newNoteButton = new Button(context);
+            newNoteButton.setLayoutParams(layoutParams);
+            newNoteButton.setText(getResources().getString(R.string.addNewNote));
             listView = new ListView(context);
-            //listView.setLayoutParams(layoutParams);
 
+            // adds the views to the layout
             addView(newNoteButton);
             addView(listView);
         }
+    /**
+     * returns the returnButton to have its function defined in MainActivity
+     * @return returnButton button with no function
+     */
         public Button returnButton(){
             return newNoteButton;
         }
+    /**
+     * returns the ListView to have its function defined in MainActivity
+     * @return listView empty listView that was created here
+     */
         public ListView returnListView(){
             return listView;
         }
-//        public GridLayout.LayoutParams returnLayout(){
-//            return layoutParams;
-//        }
-
-
-
 }

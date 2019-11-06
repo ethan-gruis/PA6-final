@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Handles the logic behind MainActivity
+ * Handles the logic behind NoteActivity
  *
  */
 public class NoteActivity extends AppCompatActivity {
@@ -73,7 +73,6 @@ public class NoteActivity extends AppCompatActivity {
             spinner.setSelection(existingSpinner);
         }
 
-
         doneButton.setOnClickListener(new View.OnClickListener() {
             /**
              * Handles logic for when done button is clicked
@@ -100,7 +99,6 @@ public class NoteActivity extends AppCompatActivity {
 
         setContentView(noteActivityLayout);
     }
-
     /**
      * populates a spinner with a set of strings from res/values/strings.xml
      *
