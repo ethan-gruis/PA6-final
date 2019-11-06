@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PA6</string>
+    <string name="title">Title</string>
+    <string name="contents">Contents</string>
+    <string name="personal">Personal</string>
+    <string name="school">School</string>
+    <string name="work">Work</string>
+    <string name="other">Other</string>
+    <string name="done">Done</string>
+    <string name="title_prompt">Please enter a title</string>
+    <string name="delete_note">Are you sure you want to delete your&#160;</string>
+    <string name="note">&#160;note?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+
+
+
+
+
+
+</resources>
